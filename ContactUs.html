@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<style>
+    /* contact us page */
+.contact-container {
+    max-width: 100%;
+    margin: 10px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* LinkedIn Section */
+.linkedin-section {
+    flex: 1;
+    text-align: left;
+}
+
+.linkedin-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.linkedin-section a {
+    display: inline-block;
+    background: #0077b5;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.linkedin-section a:hover {
+    background: #005582;
+}
+
+/* Form Section */
+.contact-form-container {
+    flex: 2;
+    text-align: left;
+}
+
+.contact-form-container h1 {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.contact-form-container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+.contact-header h1 ,p{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+/* Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #444;
+    font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.3s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff9800;
+    outline: none;
+}
+
+.contact-form button {
+    background: #ff9800;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background: #e68900;
+    transform: scale(1.05);
+}
+</style>
+<body style="background: url(images/bg.jpg)no-repeat center/cover; ">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/lambda-ai-logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul> 
+        <div class="nav-icons">
+            <a href="Login.html" class="login-icon" aria-label="Login">
+                <i class="fas fa-user"></i> 
+            </a>
+            <button class="dark-mode-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+            <button class="language-toggle" aria-label="Switch language"><i class="fas fa-globe"></i></button>
+        </div>
+    </nav>
+    <div class="contact-header">
+        <h1>Contact Us</h1>
+        <p>Connect with us on LinkedIn or send us a message.</p>
+    </div>
+
+    <div class="contact-container">
+
+
+        <div class="linkedin-section">
+
+            <h2>Follow Us on LinkedIn</h2>
+            <p>Stay updated with our latest <br>projects and team updates.</p>
+            <a href="https://www.linkedin.com/company/lambda-ai-solution/" target="_blank" class="linkedin-link">Visit
+                Our LinkedIn</a>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="portfolio.html"> Portfolio</a></li>
+        </ul>
+        <p>&copy; 2025 Lambda Team</p>
+    </footer>
+</body>
+
+</html>

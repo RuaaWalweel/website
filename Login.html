@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+     <!-- Navigation Bar -->
+     <nav class="navbar">
+        <div class="logo">
+            <img src="images/lambda-ai-logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul> 
+        <div class="nav-icons">
+            <a href="Login.html" class="login-icon" aria-label="Login">
+                <i class="fas fa-user"></i> 
+            </a>
+            <button class="dark-mode-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+            <button class="language-toggle" aria-label="Switch language"><i class="fas fa-globe"></i></button>
+        </div>
+    </nav>
+
+    <div class="login-container">
+        <h2>Log in to your account</h2>
+        <form>
+            <label>Email</label>
+            <input type="email" placeholder="example@lambda.com" required>
+            
+            <label>Password</label>
+            <input type="password" placeholder="********" required>
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+            </div>
+
+            <button type="submit">Log in</button>
+        </form>
+
+        <div class="footer">
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+    </div>
+    <footer>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="portfolio.html"> Portfolio</a></li>
+        </ul>
+        <p>&copy; 2025 Lambda Team</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

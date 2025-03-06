@@ -1,0 +1,373 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lambda Team</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            transition: background 0.5s, color 0.5s;
+        }
+        .dark-mode {
+            background: #1e1e1e;
+            color: #f5f5f5;
+        }
+        .dark-mode .navbar, .dark-mode footer {
+            background: #333;
+        }
+        .dark-mode .btn {
+            background: #ff9800;
+            color: white;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero h1 {
+            animation: fadeSlide 1.5s ease-in-out;
+        }
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff9800;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            font-size: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .back-to-top:hover {
+            background: #e68900;
+        }
+
+        /* Ensure Sections are Visible */
+        .why-join {
+            display: block; 
+            text-align: center;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .benefits {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .benefit {
+            width: 30%;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode .benefit {
+            background: #333;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            width: 100%;
+            padding: 60px 20px;
+            background: url('images/bg.jpg') no-repeat center center/cover;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hero .btn {
+            background: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: orange;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .hero .btn:hover {
+            background: #d97700;
+        }
+
+        /* Why Join Us Section */
+        .why-join {
+            padding: 40px 20px;
+            background: white;
+        }
+
+        .why-join h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .benefits {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .benefit {
+            background: #ff9800;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            transition: 0.3s;
+        }
+
+        .benefit:hover {
+            transform: scale(1.05);
+        }
+
+        /* Projects Section */
+        .projects-section {
+            padding: 40px 20px;
+            background: #f4f4f4;
+        }
+
+        .projects-section h2 {
+            font-size: 28px;
+            text-align: center;
+            color: #333;
+        }
+
+        .project {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .project p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 40px 20px;
+            text-align: center; 
+        }
+
+        .team-section h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .team-section img {
+            display: block; 
+            margin: 20px auto; 
+            width: 50%;
+            max-width: 1000px;
+            height: auto; 
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/lambda-ai-logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul> 
+        <div class="nav-icons">
+            <a href="Login.html" class="login-icon" aria-label="Login">
+                <i class="fas fa-user"></i> 
+            </a>
+            <button class="dark-mode-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+            <button class="language-toggle" aria-label="Switch language"><i class="fas fa-globe"></i></button>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="hero fade-in" id="home">
+        <h1 data-lang="welcome">Welcome to Lambda Team</h1>
+        <p data-lang="intro">Your gateway to innovation and collaboration in AI, Robotics, and Technology.</p>
+        <a href="signup.html" class="btn" data-lang="join">Join Us Today</a>
+    </header>
+
+    <!-- Why Join Us Section -->
+    <section class="why-join fade-in" id="why">
+        <h2 data-lang="why">Why Should You Join?</h2>
+        <div class="benefits">
+            <div class="benefit fade-in">
+                <h3>🚀 <span data-lang="innovation-title">Innovation</span></h3>
+                <p data-lang="innovation-text">Be part of groundbreaking AI and robotics projects.</p>
+            </div>
+            <div class="benefit fade-in">
+                <h3>🤝 <span data-lang="community-title">Community</span></h3>
+                <p data-lang="community-text">Join a team of passionate professionals and tech enthusiasts.</p>
+            </div>
+            <div class="benefit fade-in">
+                <h3>🎓 <span data-lang="learning-title">Learning</span></h3>
+                <p data-lang="learning-text">Access exclusive courses and training sessions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+<section class="projects-section fade-in" id="projects">
+    <h2>Our Projects</h2>
+    
+    <div class="project">
+        <h3>Project: AI-powered Robotic Vision System</h3>
+        
+        <h4>Summary</h4>
+        <p>We developed a custom robotic vision system designed to automate the process of inventory management in warehouses. By combining artificial intelligence with advanced computer vision techniques, the system provides accurate, real-time identification, tracking, and categorization of products, leading to improved efficiency in supply chain operations.</p>
+        
+        <h4>Problem</h4>
+        <p>Our client was experiencing challenges with manual inventory management, leading to increased labor costs, errors in product identification, and slow inventory tracking processes. These issues resulted in delays in order fulfillment and a lack of real-time visibility into stock levels.</p>
+        
+        <h4>Solution</h4>
+        <p>We designed and implemented an AI-powered robotic vision system that autonomously identifies and classifies items using machine learning models. The system integrates with existing warehouse management software, allowing for seamless updates and tracking of inventory levels. Additionally, the robot can navigate and operate in dynamic warehouse environments, ensuring that it can work efficiently even in changing conditions.</p>
+        
+        <h4>Outcome</h4>
+        <ul>
+            <li>✅ Reduced inventory management time, improving overall supply chain efficiency.</li>
+            <li>✅ Minimized errors and misclassifications, leading to more accurate inventory records and order fulfillment.</li>
+            <li>✅ Increased operational flexibility and scalability, allowing our client to handle larger volumes of products efficiently.</li>
+        </ul>
+    </div>
+
+</section>
+
+    <!-- Team Section -->
+    <section class="team-section fade-in" id="team">
+        <h2 data-lang="meet-team">Meet Our Team</h2>
+        <img src="images/theTeam.jpg" alt="Lambda Team" class="team-image">
+    </section>
+    
+    <footer>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="portfolio.html"> Portfolio</a></li>
+        </ul>
+        <p>&copy; 2025 Lambda Team</p>
+    </footer>
+    
+    <button class="back-to-top">⬆</button>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Dark Mode Toggle
+            document.querySelector(".dark-mode-toggle").addEventListener("click", function() {
+                document.body.classList.toggle("dark-mode");
+            });
+
+            // Back-to-Top Button
+            let backToTop = document.querySelector(".back-to-top");
+            window.addEventListener("scroll", function() {
+                if (window.scrollY > 300) {
+                    backToTop.style.display = "block";
+                } else {
+                    backToTop.style.display = "none";
+                }
+            });
+            backToTop.addEventListener("click", function() {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+
+            // Fade-in Animation
+            document.querySelectorAll(".fade-in").forEach(element => {
+                element.classList.add("show");
+            });
+
+            // Language Toggle
+            const translations = {
+                en: {
+                    home: "Home",
+                    team: "Team",
+                    projects: "Projects",
+                    contact: "Contact Us",
+                    portfolio: "Portfolio",
+                    welcome: "Welcome to Lambda Team",
+                    intro: "Your gateway to innovation and collaboration in AI, Robotics, and Technology.",
+                    join: "Join Us Today",
+                    why: "Why Should You Join?",
+                    "innovation-title": "Innovation",
+                    "innovation-text": "Be part of groundbreaking AI and robotics projects.",
+                    "community-title": "Community",
+                    "community-text": "Join a team of passionate professionals and tech enthusiasts.",
+                    "learning-title": "Learning",
+                    "learning-text": "Access exclusive courses and training sessions.",
+                    "meet-team": "Meet Our Team"
+                },
+                ar: {
+                    home: "الرئيسية",
+                    team: "الفريق",
+                    projects: "المشاريع",
+                    contact: "اتصل بنا",
+                    portfolio: "المعرض",
+                    welcome: "مرحبا بكم في فريق لمدا",
+                    intro: "بوابتك للابتكار والتعاون في الذكاء الاصطناعي والروبوتات والتكنولوجيا.",
+                    join: "انضم إلينا اليوم",
+                    why: "لماذا يجب أن تنضم؟",
+                    "innovation-title": "الابتكار",
+                    "innovation-text": "كن جزءًا من مشاريع الذكاء الاصطناعي والروبوتات الرائدة.",
+                    "community-title": "المجتمع",
+                    "community-text": "انضم إلى فريق من المحترفين والمتخصصين في التكنولوجيا.",
+                    "learning-title": "التعلم",
+                    "learning-text": "احصل على دورات تدريبية حصرية.",
+                    "meet-team": "تعرف على فريقنا"
+                }
+            };
+
+            let currentLang = "en";
+            document.querySelector(".language-toggle").addEventListener("click", function() {
+                currentLang = currentLang === "en" ? "ar" : "en";
+                document.querySelectorAll("[data-lang]").forEach(el => {
+                    el.textContent = translations[currentLang][el.dataset.lang];
+                });
+            });
+        });
+    </script>
+</body>
+</html>

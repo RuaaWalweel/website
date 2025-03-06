@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Lambda Team</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            transition: background 0.5s, color 0.5s;
+        }
+
+        body[dir="rtl"] {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .dark-mode {
+            background: #1e1e1e;
+            color: #f5f5f5;
+        }
+
+        .dark-mode .service-card {
+            background: #333;
+            color: white;
+        }
+
+        header {
+            background-color: #ff9800;
+            width: 100%;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(-30px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .service-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            width: 320px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+
+        .service-card h3 {
+            color: #ff9800;
+        }
+
+        .service-card p {
+            color: #555;
+        }
+
+        .cta {
+            background: #ff9800;
+            color: white;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .cta:hover {
+            background: #e68900;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .dark-mode footer {
+            background: #222;
+        }
+
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .language-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            min-width: 120px;
+        }
+
+        .language-dropdown:hover .language-dropdown-content {
+            display: block;
+        }
+
+        .language-dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .language-dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .service-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-card {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .cta {
+                width: 100%;
+                padding: 12px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/lambda-ai-logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul> 
+        <div class="nav-icons">
+            <a href="Login.html" class="login-icon" aria-label="Login">
+                <i class="fas fa-user"></i> 
+            </a>
+            <button class="dark-mode-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+            <button class="language-toggle" aria-label="Switch language"><i class="fas fa-globe"></i></button>
+        </div>
+    </nav>
+    
+    <header id="header">
+        <h1 id="title">Our Services</h1>
+        <p id="subtitle">Explore the services we offer and how we can help you achieve your goals!</p>
+    </header>
+
+    <section id="services">
+        <h2 id="offer-title">What We Offer</h2>
+        <p id="offer-text">At Lambda Team, we specialize in providing cutting-edge services in AI, robotics, and technology.</p>
+
+        <div class="service-list" id="service-list">
+            <div class="service-card" id="ai-card">
+                <h3><i class="fas fa-brain"></i> <span id="ai-service">AI Consultation</span></h3>
+                <p id="ai-text">Expert guidance on implementing AI solutions to optimize your business.</p>
+            </div>
+            <div class="service-card" id="robot-card">
+                <h3><i class="fas fa-robot"></i> <span id="robot-service">Robotics Development</span></h3>
+                <p id="robot-text">Innovative robotic systems for automation and machine learning integration.</p>
+            </div>
+            <div class="service-card" id="custom-card">
+                <h3><i class="fas fa-cogs"></i> <span id="custom-service">Custom Solutions</span></h3>
+                <p id="custom-text">Tailored tech solutions to meet your unique business challenges.</p>
+            </div>
+        </div>
+
+        <a href="ContactUs.html" class="cta" id="contact-btn">Contact Us to Discuss Your Project</a>
+    </section>
+
+    <footer>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="portfolio.html"> Portfolio</a></li>
+        </ul>
+        <p>&copy; 2025 Lambda Team</p>
+    </footer>
+    
+    <script>
+        const translations = {
+            en: {
+                title: "Our Services",
+                subtitle: "Explore the services we offer and how we can help you achieve your goals!",
+                offerTitle: "What We Offer",
+                offerText: "At Lambda Team, we specialize in providing cutting-edge services in AI, robotics, and technology.",
+                aiService: "AI Consultation",
+                aiText: "Expert guidance on implementing AI solutions to optimize your business.",
+                robotService: "Robotics Development",
+                robotText: "Innovative robotic systems for automation and machine learning integration.",
+                customService: "Custom Solutions",
+                customText: "Tailored tech solutions to meet your unique business challenges.",
+                contactBtn: "Contact Us to Discuss Your Project",
+            },
+            ar: {
+                title: "خدماتنا",
+                subtitle: "استكشف الخدمات التي نقدمها وكيف يمكننا مساعدتك في تحقيق أهدافك!",
+                offerTitle: "ما نقدمه",
+                offerText: "في فريق لامبدا، نحن متخصصون في تقديم الخدمات المتقدمة في الذكاء الاصطناعي والروبوتات والتكنولوجيا.",
+                aiService: "استشارة الذكاء الاصطناعي",
+                aiText: "إرشادات الخبراء لتنفيذ حلول الذكاء الاصطناعي وتحسين أعمالك.",
+                robotService: "تطوير الروبوتات",
+                robotText: "أنظمة روبوتية مبتكرة للأتمتة وتكامل التعلم الآلي.",
+                customService: "حلول مخصصة",
+                customText: "حلول تقنية مخصصة لتلبية تحديات عملك الفريدة.",
+                contactBtn: "اتصل بنا لمناقشة مشروعك",
+            }
+        };
+
+        let currentLang = "en";
+
+        document.querySelector('.language-toggle').addEventListener('click', function() {
+            currentLang = currentLang === "en" ? "ar" : "en";
+
+            document.getElementById('title').textContent = translations[currentLang].title;
+            document.getElementById('subtitle').textContent = translations[currentLang].subtitle;
+            document.getElementById('offer-title').textContent = translations[currentLang].offerTitle;
+            document.getElementById('offer-text').textContent = translations[currentLang].offerText;
+            document.getElementById('ai-service').textContent = translations[currentLang].aiService;
+            document.getElementById('ai-text').textContent = translations[currentLang].aiText;
+            document.getElementById('robot-service').textContent = translations[currentLang].robotService;
+            document.getElementById('robot-text').textContent = translations[currentLang].robotText;
+            document.getElementById('custom-service').textContent = translations[currentLang].customService;
+            document.getElementById('custom-text').textContent = translations[currentLang].customText;
+            document.getElementById('contact-btn').textContent = translations[currentLang].contactBtn;
+
+            document.body.dir = currentLang === "ar" ? "rtl" : "ltr"; // Adjust text direction
+        });
+
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+
+        document.querySelector('.dark-mode-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
+        });
+
+        // Fade-in effect on page load for header and services
+        window.addEventListener('load', () => {
+            document.getElementById('header').style.opacity = 1;
+            document.getElementById('header').style.transform = 'translateY(0)';
+            document.getElementById('service-list').style.opacity = 1;
+            document.getElementById('service-list').style.transform = 'translateY(0)';
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = 1;
+                    card.style.transform = 'translateY(0)';
+                }, index * 200); // Staggering the animation
+            });
+        });
+    </script>
+</body>
+</html>

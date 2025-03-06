@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Lambda Team</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body{
+            background-image: url(images/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        /* Team Section */
+        .team-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 60%;
+            margin: 100px auto;
+            background: #fff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .team-container.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .team-profile {
+            text-align: center;
+        }
+        .team-profile img {
+            width: 100px;
+        }
+        .team-members ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding-top: 20px;
+        }
+        .team-members li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .team-members li:hover {
+            transform: scale(1.1);
+        }
+        .team-members img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        .team-members div {
+            color: inherit;
+        }
+        .team-members h3{
+            text-align: center;
+            font-size: 30px;
+        }
+        .message-btn{
+            background-color: orange;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        /* Dark Mode */
+        .dark-mode {
+            background: #222;
+            color: #fff;
+        }
+        .dark-mode .team-container {
+            background: #333;
+            color: white;
+            box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+        }
+        .dark-mode .team-members li {
+            background: #444;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/lambda-ai-logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+            <li><a href="team.html" data-en="Team" data-ar="الفريق">Team</a></li>
+            <li><a href="Services.html" data-en="Services" data-ar="الخدمات">Services</a></li>
+            <li><a href="ContactUs.html" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a></li>
+            <li><a href="portfolio.html" data-en="Portfolio" data-ar="المعرض">Portfolio</a></li>
+        </ul> 
+        <div class="nav-icons">
+            <a href="Login.html" class="login-icon" aria-label="Login">
+                <i class="fas fa-user"></i> 
+            </a>
+            <button class="dark-mode-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+            <button class="language-toggle" aria-label="Switch language"><i class="fas fa-globe"></i></button>
+        </div>
+    </nav>
+    
+    <div class="team-container">
+        <div class="team-profile">
+            <img src="images/lambda-ai-logo.png" alt="Lambda Team">
+            <h2 data-en="Lambda Team" data-ar="فريق لامبدا">Lambda Team</h2>
+            <p data-en="We’re on a mission to make human life easier, safer, and more fun using robotics and IoT." 
+               data-ar="نحن في مهمة لجعل الحياة البشرية أسهل وأكثر أمانًا وأكثر متعة باستخدام الروبوتات وإنترنت الأشياء.">
+                We’re on a mission to make human life easier, safer, and more fun using robotics and IoT.
+            </p>
+            <a href="contactus.html" class="message-btn" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
+        </div>
+        <div class="team-members">
+            <h3 data-en="Our Team" data-ar="فريقنا">Our Team</h3>
+            <ul>
+                <li><img src="images/liath.jpg" alt="Laith Mustafa"><div><strong>Laith Mustafa</strong><p>Physics & AI Engineer</p></div></li>
+                <li><img src="images/alaa.jpg" alt="Alaa Salama"><div><strong>Alaa Salama</strong><p>Business</p></div></li>
+                <li><img src="images/mohammad.jpg" alt="Mohammad Zallom"><div><strong>Mohammad Zallom</strong><p>Electrical & Robotics</p></div></li>
+                <li><img src="images/saeed.jpg" alt="Saeed Ghazal"><div><strong>Saeed Ghazal</strong><p>3D Design</p></div></li>
+                <li><img src="images/ruaa.jpg" alt="Ruaa Walweel"><div><strong>Ruaa Walweel</strong><p>Mobile App Developer</p></div></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="portfolio.html"> Portfolio</a></li>
+        </ul>
+        <p>&copy; 2025 Lambda Team</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navbar = document.querySelector(".navbar");
+            const darkModeToggle = document.querySelector(".dark-mode-toggle");
+            const languageToggle = document.querySelector(".language-toggle");
+            const teamContainer = document.querySelector(".team-container");
+            let isArabic = false;
+            
+            window.addEventListener("scroll", () => {
+                navbar.classList.toggle("sticky", window.scrollY > 50);
+            });
+            
+            darkModeToggle.addEventListener("click", () => {
+                document.body.classList.toggle("dark-mode");
+            });
+            
+            languageToggle.addEventListener("click", () => {
+                isArabic = !isArabic;
+                document.documentElement.lang = isArabic ? "ar" : "en";
+                document.querySelectorAll("[data-en]").forEach(el => {
+                    el.textContent = isArabic ? el.getAttribute("data-ar") : el.getAttribute("data-en");
+                });
+            });
+            
+            setTimeout(() => {
+                teamContainer.classList.add("show");
+            }, 500);
+        });
+    </script>
+</body>
+</html>

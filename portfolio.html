@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<style>
+    * Portfolio Grid */
+.portfolio-container {
+    max-width: 100%;
+    margin: 10px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.portfolio-gallery {
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.portfolio-gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-gallery img:hover {
+    transform: scale(1.05);
+}
+</style>
+<body style="background: url(images/bg.jpg)no-repeat center/cover; ">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/lambda-ai-logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul> 
+        <div class="nav-icons">
+            <a href="Login.html" class="login-icon" aria-label="Login">
+                <i class="fas fa-user"></i> 
+            </a>
+            <button class="dark-mode-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+            <button class="language-toggle" aria-label="Switch language"><i class="fas fa-globe"></i></button>
+        </div>
+    </nav>
+    
+    </nav>
+    <div class="portfolio-container">
+        <header>
+            <h1>Our Portfolio</h1>
+            <p>Discover our projects in tourism, education, and farming</p>
+        </header>
+        
+        <section class="filter-buttons">
+            <button class="active">All</button>
+            <button>Tourism</button>
+            <button>Education</button>
+        </section>
+        
+        <section class="portfolio-gallery">
+            <div class="portfolio-item"><img src="images/farmrobot.png" alt="Project 1"></div>
+            <div class="portfolio-item"><img src="images/robot.jpg" alt="Project 2"></div>
+            <div class="portfolio-item"><img src="images/sec.png" alt="Project 3"></div>
+            <div class="portfolio-item"><img src="images/bb.jpg" alt="Project 2"></div>
+            <div class="portfolio-item"><img src="images/parkingiot.webp" alt="Project 3"></div>
+        </section>
+    </div>
+   
+    <footer>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="portfolio.html"> Portfolio</a></li>
+        </ul>
+        <p>&copy; 2025 Lambda Team</p>
+    </footer>
+</body>
+</html>
