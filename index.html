@@ -199,6 +199,81 @@
             height: auto; 
             border-radius: 10px;
         }
+         /* Media Queries for Responsiveness */
+         @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero .btn {
+                font-size: 16px;
+                padding: 10px 25px;
+            }
+
+            .benefits {
+                flex-direction: column;
+            }
+
+            .benefit {
+                width: 80%;
+            }
+
+            .projects-section h2 {
+                font-size: 24px;
+            }
+
+            .project {
+                width: 90%;
+            }
+
+            .team-section h2 {
+                font-size: 24px;
+            }
+
+            .team-section img {
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .hero .btn {
+                font-size: 14px;
+                padding: 8px 20px;
+            }
+
+            .benefit {
+                width: 90%;
+                margin: 10px auto;
+            }
+
+            .back-to-top {
+                bottom: 15px;
+                right: 15px;
+            }
+        }
 
     </style>
 </head>
